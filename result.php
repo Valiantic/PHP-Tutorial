@@ -1,18 +1,18 @@
 <?php
 
-
+// include again the database 
 include("connections.php");
 
-if(empty($_GET["search"])){
+if(empty($_GET["search"])){  
 
-    echo "no value";
+    echo "no value";  // check if the search button has no value 
     
-}else{
+}else{  // else search the value if there is one
 
     $check = $_GET["search"];
 
     $terms = explode(" ", $check);
-    $q = " SELECT * FROM tbl_accounts WHERE ";
+    $q = " SELECT * FROM tbl_accounts WHERE ";  // always check the query 
     $i = 0;
 
         foreach($terms as $each){
@@ -20,9 +20,9 @@ if(empty($_GET["search"])){
             $i++;
 
             if($i==1){
-                $q .= "Email LIKE '%$each%' ";
+                $q .= "Email LIKE '%$each%' ";  // LIKE QUERY 
             }else {
-                $q .= "OR Email LIKE '%$each%' ";
+                $q .= "OR Email LIKE '%$each%' "; // LIKE QUERY 
             }
 
         }

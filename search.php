@@ -31,6 +31,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </style>
 
+
+<!-- form to search data  -->
 <form method="POST" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 
