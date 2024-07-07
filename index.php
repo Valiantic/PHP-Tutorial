@@ -7,7 +7,7 @@
 
 include("connections.php");
 
-$email = $username = $password = $passcode = $cpasscode = "";  
+$email = $username = $password =  "";  
 $emailErr = $usernameErr = $passwordErr = $passcodeErr = $cpasscodeErr = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,17 +31,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
   }
 
-  if(empty ($_POST["passcode"])){
-    $passcodeErr = "Passcode is Required!";
-  } else {
-    $passcode = $_POST["passcode"];
-  }
+  // if(empty ($_POST["passcode"])){
+  //   $passcodeErr = "Passcode is Required!";
+  // } else {
+  //   $passcode = $_POST["passcode"];
+  // }
 
-  if(empty ($_POST["cpasscode"])){
-    $cpasscodeErr = "Confirm Passcode is Required!";
-  } else {
-    $cpasscode = $_POST["cpasscode"];
-  }
+  // if(empty ($_POST["cpasscode"])){
+  //   $cpasscodeErr = "Confirm Passcode is Required!";
+  // } else {
+  //   $cpasscode = $_POST["cpasscode"];
+  // }
   // ALWAYS ADD ANOTHER IF STATEMENT FOR BLANK FIELD VALIDATOR
   // ALWAYS CHECK THE VALIDATOR
 }
@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // THIS IS THE ONE THAT IS MOVE FROM LESSON 11 LOGIN
 // ADD THE COLUMN HERE INSIDE THE IF ELSE IF ADDED ANOTHER COLUMN
-if ($email && $username && $password && $passcode && $cpasscode) {
+if ($email && $username && $password) {
 
   // EMAIL CHECKER
 
@@ -102,12 +102,7 @@ if ($email && $username && $password && $passcode && $cpasscode) {
 <h4>Password</h4>
 <input type="password" name="password" value="<?php echo $password; ?>"> 
 <span class="error"><?php echo $passwordErr; ?></span> 
-<h4>Passcode</h4>
-<input type="password" name="passcode" value="<?php echo $passcode; ?>"> 
-<span class="error"><?php echo $passcodeErr; ?></span> 
-<h4>Confirm passcode</h4>
-<input type="password" name="cpasscode" value="<?php echo $cpasscode; ?>"> 
-<span class="error"><?php echo $cpasscodeErr; ?></span> 
+
 
 <input type="submit" value="Submit">
 
