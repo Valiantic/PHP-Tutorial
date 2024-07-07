@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($_POST["Password"])){
         $passwordErr = "Password is required";
     }else {
-        $password = $_POST["password"];
+        $password = $_POST["Password"];
     }
 
 
@@ -35,17 +35,27 @@ if($email && $password) {
 
         while($row = mysqli_fetch_assoc($check_email)) {
 
-            $db_email = $row["Password"];
+            $db_password = $row["Password"];
             $db_account_type = $row["account_type"];
 
                 if($password == $db_password){
-                    
+
+                    if($db_account_type == "1"){
+                        echo "<script>window.location.href='admin';</script>";
+                    }
+                    else{
+                        echo "<script>window.location.href='user';</script>";
+                    }
+
+                }
+                else{
+                    $passwordErr = "Password is incorrect!";
                 }
 
         }
 
     }else{
-
+            $emailErr = "Email is not Registered!";
     }
 
 }
