@@ -1,9 +1,14 @@
 
+<!-- LESSON TO FINISH LOGIN & SESSION! -->
+
+<!-- ADD COLUMNS AND ERROR VALIDATION  -->
 
 <?php
 
-$email = $username = $password = "";
-$emailErr = $usernameErr = $passwordErr = "";
+include("connections.php");
+
+$email = $username = $password = $passcode = $cpasscode = "";  
+$emailErr = $usernameErr = $passwordErr = $passcodeErr = $cpasscodeErr = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -25,7 +30,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $password = $_POST["password"];
   }
+
+  if(empty ($_POST["passcode"])){
+    $passcodeErr = "Passcode is Required!";
+  } else {
+    $passcode = $_POST["passcode"];
+  }
+
+  if(empty ($_POST["cpasscode"])){
+    $cpasscodeErr = "Confirm Passcode is Required!";
+  } else {
+    $cpasscode = $_POST["cpasscode"];
+  }
+  // ALWAYS ADD ANOTHER IF STATEMENT FOR BLANK FIELD VALIDATOR
+  // ALWAYS CHECK THE VALIDATOR
 }
+
+
+
+
+// THIS IS THE ONE THAT IS MOVE FROM LESSON 11 LOGIN
+// ADD THE COLUMN HERE INSIDE THE IF ELSE IF ADDED ANOTHER COLUMN
+if ($email && $username && $password && $passcode && $cpasscode) {
+
+  // EMAIL CHECKER
+
+  $check_email = mysqli_query($connections, "SELECT * FROM tbl_accounts WHERE Email='$email'");
+  $check_email_row = mysqli_num_rows($check_email);
+
+  if($check_email_row > 0){
+    $emailErr = "Email is already registered!";
+  }else {
+    echo "welcome!";
+  }
+
+}
+
 
 ?>
 
@@ -40,21 +80,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php include("nav.php"); ?>
 
+<!-- navbar for search -->
+
 <br>
 <br>
 
 <form method="POST" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 <!-- input field -->
-
-<input type="text" name="email" value="<?php echo $email; ?>"> <br>
-<span class="error"><?php echo $emailErr; ?></span> <br>
-
-<input type="text" name="username" value="<?php echo $username; ?>"> <br>
-<span class="error"><?php echo $usernameErr; ?></span> <br>
-
-<input type="password" name="password" value="<?php echo $password; ?>"> <br>
-<span class="error"><?php echo $passwordErr; ?></span> <br>
+ 
+<h4>Email</h4>
+<input type="text" name="email" value="<?php echo $email; ?>"> 
+<span class="error"><?php echo $emailErr; ?></span> 
+<h4>Username</h4>
+<input type="text" name="username" value="<?php echo $username; ?>"> 
+<span class="error"><?php echo $usernameErr; ?></span> 
+<h4>Password</h4>
+<input type="password" name="password" value="<?php echo $password; ?>"> 
+<span class="error"><?php echo $passwordErr; ?></span> 
+<h4>Passcode</h4>
+<input type="password" name="passcode" value="<?php echo $passcode; ?>"> 
+<span class="error"><?php echo $passcodeErr; ?></span> 
+<h4>Confirm passcode</h4>
+<input type="password" name="cpasscode" value="<?php echo $cpasscode; ?>"> 
+<span class="error"><?php echo $cpasscodeErr; ?></span> 
 
 <input type="submit" value="Submit">
 
@@ -67,17 +116,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 // database connector
 // include means importin other variable 
 // from other file to this file
-include("connections.php");
+// include("connections.php");
 
 
-if ($email && $username && $password) {
-  //  adding a user to the database 
-   $query = mysqli_query($connections, "INSERT INTO tbl_accounts(Email,Username,Password) VALUES('$email','$username','$password')");
 
-  // indicator that a new account is inserted using js 
-  echo "<script language='javascript'>alert('New Record has been inserted!')</script>";
-  echo "<script>window.location.href='index.php';</script>";
-  }
+
+  // //  adding a user to the database 
+  //  $query = mysqli_query($connections, "INSERT INTO tbl_accounts(Email,Username,Password) VALUES('$email','$username','$password')");
+
+  // // indicator that a new account is inserted using js 
+  // echo "<script language='javascript'>alert('New Record has been inserted!')</script>";
+  // echo "<script>window.location.href='index.php';</script>";
+  
 
   // read the user 
   $view_query = mysqli_query($connections, "SELECT * FROM tbl_accounts");
@@ -129,8 +179,10 @@ echo "</table>";
 
 <hr>
 
+
 <?php
 
+// NOTHING HERE JUST TO ITERATE EVERY WORD ON A VARIABLE
 $alverhx = "Alverhx";
 $steven = "Steven";
 $owric = "Owric";
