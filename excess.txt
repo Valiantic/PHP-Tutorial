@@ -1,0 +1,16 @@
+// INSIDE THE FORM 
+
+<h4>Passcode</h4>
+<input type="password" name="passcode" value="<?php echo $passcode; ?>"> 
+<span class="error"><?php echo $passcodeErr; ?></span> 
+<h4>Confirm passcode</h4>
+<input type="password" name="cpasscode" value="<?php echo $cpasscode; ?>"> 
+<span class="error"><?php echo $cpasscodeErr; ?></span> 
+
+// UP IN THE FORM VALIDATOR 
+
+$passcode = $cpasscode =
+
+// INSIDE THE IF STATE METHOD
+
+&& $passcode && $cpasscode
