@@ -61,8 +61,12 @@ if ($email && $username && $password && $passcode && $cpasscode) {
   if($check_email_row > 0){
     $emailErr = "Email is already registered!";
   }else {
-    echo "welcome!";
-  }
+    $query = mysqli_query($connections, "INSERT INTO tbl_accounts(Email,Username,Password,passcode,account_type)
+    VALUE('$email','$username','$password','$cpasscode','2')");
+  
+    echo "<script language='javascript'>alert('New Record has been inserted!')</script>";
+    echo "<script>window.location.href='index.php';</script>";
+}
 
 }
 
