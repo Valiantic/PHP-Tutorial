@@ -1,0 +1,56 @@
+List of web applications:
+1. Advance Real Estate Management System
+2. Advance Hospital management system
+3. Assets and Maintainance Management system
+4. Library management System
+5. Bus Booking
+6. CLASSIFIED ADS
+7. School Management Software
+8. Courier Management System
+9. CRM (Accounts, HR Inventory)
+10.HRM accounting and Payroll
+11.Dating website + Admin Panel
+12.Event Management and Frontend
+13.Fleet Management Software Website
+14.Freelance CRM Software
+15.Tour And Travel PortalCity and travel guide
+16. Php chat room and private chat
+17. Gym Management and Fitness system Management
+18. Doctor online booking and appointment system
+19. Hotel Booking & Management System
+20. Point Of Sale & Inventory Management System
+21. Pharma Billing
+22. Learning management system udemy clone
+23.E-Banking & Loan Management System
+24. Matrimonial Software
+25. Multi-school Management
+26. Online Auction Management and Front End Website
+27. Online Exam Management System
+28. POS - Restaurant Management
+29. Project Management software (ultimate version)
+30. Job Portal
+31. Movie Ticketing software
+32. News Portal Software (Pro Version)
+33. Multivendor B2B E-commerce website
+34. E-commerce B2C Management system
+35. Property Management System
+36. Sales CRM software
+37. Saloon Booking
+38. Smart crowdfunding Application and Frontend website
+39. Social Store Blog software
+40. stackpost
+41. Stock Management System
+42. Tailor Management Software
+43. Tenants and Room Management Software
+44. The online food order system
+45. Lottery Management system
+46. Website Builder (Drag and drop) and CMS
+47. YouTube Clone
+48. Netflix Clone
+49.Helpdesk support ticket management system
+50. Video game Marketplace
+51. Multipurpose Website CMS
+52. Clinic management system
+53. logistic Management system
+54. SMM panel script
+55. lawyer case management system
