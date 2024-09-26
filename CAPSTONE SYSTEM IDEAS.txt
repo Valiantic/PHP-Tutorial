@@ -1,3 +1,24 @@
+DRAFT 
+
+
+Members:
+Steven Gabriel G. Madali
+Rhenzomar M. Facundo
+Meinard C. Languita
+
+1. Juan: AI-Powered Custom Voice Assistant for School Management Inquiries System 
+>Juan is an Artificial Intelligence voice assistant that is specifically designed to assist users such as 
+old and new students about their inquiries within the school. Integrating this kind of functionality 
+to the school management system could greatly optimize the communication between the school and the users. In addition, this could help visually impaired students and help them with their inquiries using vocal communication.   
+
+2. Ask Iris: AI-Enhanced Ecommerce for Baking & Pastry with Smart Product Recommendations
+>Integrating an AI Chatbot to enchance user experience by giving recommendation of variety of special products, bundles or best seller. This could greatly increase the revenue of the business due to assist of AI and help the user to speed up process by choosing the the right products they need. 
+
+3. SmartApartment: AI-Powered Chatbot for Tenant Support and Personalized Apartment Recommendations
+>An advanced apartment system integrated by an AI Chatbot designed to assist user by recommeding the certain
+apartments based on their budget allocation and location. This could also help tenants assist their inquiry questions about the apartment details and ensure a smooth efficient experience.   
+
+
 List of web applications:
 1. Advance Real Estate Management System
 2. Advance Hospital management system
@@ -14,7 +35,7 @@ List of web applications:
 13.Fleet Management Software Website
 14.Freelance CRM Software
 15.Tour And Travel PortalCity and travel guide
-16. Php chat room and private chat
+16. Php chat room and private chat / 
 17. Gym Management and Fitness system Management
 18. Doctor online booking and appointment system
 19. Hotel Booking & Management System
@@ -28,7 +49,7 @@ List of web applications:
 27. Online Exam Management System
 28. POS - Restaurant Management
 29. Project Management software (ultimate version)
-30. Job Portal
+30. Job Portal /
 31. Movie Ticketing software
 32. News Portal Software (Pro Version)
 33. Multivendor B2B E-commerce website
@@ -41,7 +62,7 @@ List of web applications:
 40. stackpost
 41. Stock Management System
 42. Tailor Management Software
-43. Tenants and Room Management Software
+43. Tenants and Room Management Software / 
 44. The online food order system
 45. Lottery Management system
 46. Website Builder (Drag and drop) and CMS
